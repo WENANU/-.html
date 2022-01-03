@@ -38,6 +38,16 @@
             }
         }
 
+        @keyframes gd {
+            0% {
+                transform: rotate();
+            }
+
+            100% {
+                transform: rotate(0deg);
+            }
+        }
+
         .box div:nth-child(1) {
             float: left;
             width: 250px;
@@ -104,6 +114,7 @@
 
 <body>
     <button>加速</button>
+    <button class="tt">暂停</button>
     <div class="box">
         <div></div>
         <div></div>
@@ -115,9 +126,14 @@
     <script>
         var btn = document.querySelector('button');
         var bb = document.querySelector('.box');
+        var tt = document.querySelector('.tt');
         btn.addEventListener('click', function () {
 
             bb.style.animation = 'gg 1s linear infinite';
+        });
+        tt.addEventListener('click', function () {
+
+            bb.style.animation = 'gd 1s linear infinite';
         });
     </script>
 </body>
