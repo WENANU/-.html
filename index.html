@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>八卦</title>
+    <style>
+        .box {
+            position: relative;
+            width: 500px;
+            height: 500px;
+            border: 1px solid black;
+            margin: 100px auto;
+            border-radius: 50%;
+            overflow: hidden;
+            animation: bg 1s linear infinite;
+        }
+
+        @keyframes bg {
+            0% {
+                transform: rotate();
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes gg {
+            0% {
+                transform: rotate();
+            }
+
+            100% {
+                transform: rotate(7760deg);
+            }
+        }
+
+        .box div:nth-child(1) {
+            float: left;
+            width: 250px;
+            height: 500px;
+            background-color: black;
+            /* border-radius: 50%; */
+        }
+
+        .box div:nth-child(2) {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 250px;
+            height: 500px;
+            background-color: #fff;
+            /* border-radius: 50%; */
+        }
+
+        .box div:nth-child(3) {
+            position: absolute;
+            top: 0;
+            left: 125px;
+            width: 250px;
+            height: 250px;
+            background-color: black;
+            border-radius: 50%;
+
+        }
+
+        .box div:nth-child(4) {
+            position: absolute;
+            bottom: 0;
+            left: 125px;
+            width: 250px;
+            height: 250px;
+            background-color: #fff;
+            border-radius: 50%;
+
+        }
+
+        .box div:nth-child(5) {
+            position: absolute;
+            top: 95px;
+            left: 235px;
+            width: 50px;
+            height: 50px;
+            background-color: #fff;
+            border-radius: 50%;
+
+        }
+
+        .box div:nth-child(6) {
+            position: absolute;
+            bottom: 95px;
+            left: 235px;
+            width: 50px;
+            height: 50px;
+            background-color: black;
+            border-radius: 50%;
+
+        }
+    </style>
+</head>
+
+<body>
+    <button>加速</button>
+    <div class="box">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <script>
+        var btn = document.querySelector('button');
+        var bb = document.querySelector('.box');
+        btn.addEventListener('click', function () {
+
+            bb.style.animation = 'gg 1s linear infinite';
+        });
+    </script>
+</body>
+
+</html>
